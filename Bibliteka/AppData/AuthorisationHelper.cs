@@ -1,4 +1,5 @@
-﻿using OvertimeCafe.Model;
+﻿using Bibliteka;
+using Bibliteka.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,11 +7,11 @@ using System.Security.RightsManagement;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OvertimeCafe.AppData
+namespace Bibliteka.AppData
 {
     internal class AuthorisationHelper
     {
-        private static OvertimeDbEntities _context = App.GetContext();
+        private static BiblitekaEntities _context = App.GetContext();
         public static Staff selectedUser;
         /// <summary>
         /// Авторизует пользователя

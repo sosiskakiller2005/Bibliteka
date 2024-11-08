@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace OvertimeCafe.AppData
+namespace Bibliteka.AppData
 {
     /// <summary>
     /// Класс для страничной навигации

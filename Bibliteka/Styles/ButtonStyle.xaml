@@ -3,13 +3,22 @@
     <Style TargetType="Button">
         <Setter Property="FontSize" Value="25" />
         <Setter Property="FontFamily" Value="Tahoma" />
+        <Setter Property="Foreground" Value="White" />
         <Setter Property="Width" Value="200" />
         <Setter Property="Height" Value="50" />
-        <Setter Property="Background" Value="#FF81BF5D" />
-        <Setter Property="Foreground" Value="White" />
-        <Setter Property="BorderThickness" Value="0" />
-    </Style>
-    <Style TargetType="Border">
-        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="#C40000" 
+                            BorderBrush="Transparent"
+                            BorderThickness="1" 
+                            CornerRadius="15" 
+                            Padding="5">
+                        <ContentPresenter HorizontalAlignment="Center" 
+                                          VerticalAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>
