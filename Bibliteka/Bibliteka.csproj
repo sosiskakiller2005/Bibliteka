@@ -69,6 +69,15 @@
     <Compile Include="Views\AdminViews\AdminWIndow.xaml.cs">
       <DependentUpon>AdminWIndow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Pages\OrdersPage.xaml.cs">
+      <DependentUpon>OrdersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\ShiftsPage.xaml.cs">
+      <DependentUpon>ShiftsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pages\StaffPage.xaml.cs">
+      <DependentUpon>StaffPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Windows\AuthorisationWindow.xaml.cs">
       <DependentUpon>AuthorisationWindow.xaml</DependentUpon>
     </Compile>
@@ -159,9 +168,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Styles\ButtonStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -199,6 +206,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Pages\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\ShiftsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pages\StaffPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Windows\AuthorisationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -215,6 +234,7 @@
       <DependentUpon>BiblitekaDb.edmx</DependentUpon>
       <LastGenOutput>BiblitekaDb.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\logo2.png" />
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>

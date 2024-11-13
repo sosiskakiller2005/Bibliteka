@@ -1,0 +1,30 @@
+﻿<Page x:Class="Bibliteka.Views.Pages.OrdersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Bibliteka.Views.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="486" d:DesignWidth="900"
+      Title="OrdersPage">
+
+    <StackPanel>
+        <TextBlock Text="Список заказов" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+        <Border Height="10"/>
+        <DataGrid Name="OrdersDg" AutoGenerateColumns="False" FontSize="20" Margin="10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер заказа" Binding="{Binding Path=Id}"/>
+                <DataGridTextColumn Header="Блюдо" Binding="{Binding Path=Dish.Name}"/>
+                <DataGridTextColumn Header="Столик" Binding="{Binding Path=Guest.Table.Number}"/>
+                <DataGridTextColumn Header="Готовность" Binding="{Binding Path=DishStatus.Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Border Height="10"/>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="10"/>
+            <Button Name="AddBtn" Content="Добавить" Click="AddBtn_Click"/>
+            <Border Width="10"/>
+            <Button Name="EditBtn" Content="Изменить" Click="EditBtn_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Page>

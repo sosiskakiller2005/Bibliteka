@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bibliteka.Views.AdminViews"
         mc:Ignorable="d"
-        Title="AdminWIndow" Height="450" Width="800">
+        Title="Главное окно" Height="600" Width="900" Background="#D3C2C2" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".2*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Border Width="20"/>
+            <Button Name="OrdersBtn" Click="OrdersBtn_Click" Style="{StaticResource MenuBtn}">
+                <Button.Content>
+                    <TextBlock Text="Список заказов" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+                </Button.Content>
+            </Button>
+            <Border Width="20"/>
+            <Button Name="StaffBtn" Click="StaffBtn_Click" Style="{StaticResource MenuBtn}">
+                <Button.Content>
+                    <TextBlock Text="Список сотрудников" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+                </Button.Content>
+            </Button>
+            <Border Width="20"/>
+            <Button Name="ShiftsBtn" Click="ShiftsBtn_Click" Style="{StaticResource MenuBtn}">
+                <Button.Content>
+                    <TextBlock Text="Список смен" TextWrapping="Wrap" TextAlignment="Center" FontSize="20"/>
+                </Button.Content>
+            </Button>
+
+        </StackPanel>
+        <Image Source="/Resources/logo2.png" HorizontalAlignment="Right" Height="40" VerticalAlignment="Top"/>
+
+        <Frame Name="MainFrm" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
