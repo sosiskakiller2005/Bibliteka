@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bibliteka.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,21 @@ namespace Bibliteka.Views.Pages
     /// </summary>
     public partial class StaffPage : Page
     {
+        private static BiblitekaEntities _context = App.GetContext();
         public StaffPage()
         {
             InitializeComponent();
+            StaffGv.ItemsSource = _context.Staff.ToList();
+        }
+
+        private void AddBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
