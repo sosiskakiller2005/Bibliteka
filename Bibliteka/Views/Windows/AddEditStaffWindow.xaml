@@ -1,0 +1,46 @@
+﻿<Window x:Class="Bibliteka.Views.Windows.AddEditStaffWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bibliteka.Views.Windows"
+        mc:Ignorable="d"
+        Title="AddEditStaffWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Имя:" Height="50"/>
+            <Border Height="10"/>
+            <TextBlock Text="Возраст:" Height="50"/>
+            <Border Height="10"/>
+            <TextBlock Text="Номер телефона:" Height="50"/>
+            <Border Height="10"/>
+            <TextBlock Text="Должность:" Height="50"/>
+            <Border Height="10"/>
+            <TextBlock Text="Логин:" Height="50"/>
+            <Border Height="10"/>
+            <TextBlock Text="Пароль:" Height="50"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBox Name="NameTb" Text="{Binding Name}"/>
+            <Border Height="10"/>
+            <TextBox Name="AgeTb" Text="{Binding Age}"/>
+            <Border Height="10"/>
+            <TextBox Name="PhoneTb" Text="{Binding PhoneNumber}"/>
+            <Border Height="10"/>
+            <ComboBox Name="RoleCmb" SelectedItem="{Binding Role}"/>
+            <Border Height="10"/>
+            <TextBox Name="LoginTb" Text="{Binding Login}"/>
+            <Border Height="10"/>
+            <PasswordBox Name="PassPb"/>
+            <Border Height="10"/>
+            <Button Name="SaveBtn" Content="Сохранить" Click="SaveBtn_Click"/>
+            <Button Name="AddBtn" Content="Добавить" Click="AddBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

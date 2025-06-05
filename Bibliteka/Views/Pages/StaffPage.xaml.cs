@@ -1,4 +1,5 @@
 ﻿using Bibliteka.Model;
+using Bibliteka.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,12 +31,20 @@ namespace Bibliteka.Views.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddEditStaffWindow addEditStaffWindow = new AddEditStaffWindow();
+            if (addEditStaffWindow.ShowDialog() == true)
+            {
+                StaffGv.ItemsSource = App.GetContext().Staff.ToList();
+            }
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddEditStaffWindow addEditStaffWindow = new AddEditStaffWindow(StaffGv.SelectedItem as Staff);
+            if (addEditStaffWindow.ShowDialog() == true)
+            {
+                StaffGv.ItemsSource = App.GetContext().Staff.ToList();
+            }
         }
     }
 }

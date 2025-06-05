@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bibliteka.Views.Windows"
         mc:Ignorable="d" MinWidth="600"
-        Title="Окно авторизации" SizeToContent="WidthAndHeight" Background="#D3C2C2" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="Окно авторизации" SizeToContent="WidthAndHeight" Background="#D3C2C2"  WindowStartupLocation="CenterScreen">
     <StackPanel Margin="5">
         <Image Source="\Resources\logo.png" Width="400" HorizontalAlignment="Left"/>
         <Border Height="40"/>

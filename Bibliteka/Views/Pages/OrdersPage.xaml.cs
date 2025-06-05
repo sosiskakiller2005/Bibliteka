@@ -1,4 +1,5 @@
 ﻿using Bibliteka.Model;
+using Bibliteka.Views.Windows;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,11 @@ namespace Bibliteka.Views.Pages
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            AddOrderWindow addOrderWindow = new AddOrderWindow();
+            if (addOrderWindow.ShowDialog() == true)
+            {
+                OrdersDg.ItemsSource = App.GetContext().GuestDish.ToList();
+            }
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
